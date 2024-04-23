@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import junit.framework.TestCase;
 
-public class MiBibliotecaTest extends TestCase {
+public class MiBibliotecaTest extends TestCase implements PrestarLibros {
 
 //test del constructor
 	public void testMiBiblioteca() {
@@ -34,6 +34,7 @@ public class MiBibliotecaTest extends TestCase {
 		}
 		
 		
+		@Override
 		public void testPrestar() {
 		// set up objects
 			creacionPrevia();
