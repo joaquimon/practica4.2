@@ -7,6 +7,9 @@ import junit.framework.TestCase;
 public class MiBibliotecaTest extends TestCase implements PrestarLibros {
 
 //test del constructor
+	/**
+	 * Metodo test del metodo constructor de MiBiblioteca
+	 */
 	public void testMiBiblioteca() {
 		
 		MiBiblioteca mb =new MiBiblioteca ("Test");
@@ -15,6 +18,9 @@ public class MiBibliotecaTest extends TestCase implements PrestarLibros {
 		assertTrue(mb.personas instanceof ArrayList<Persona>);
 	}
 
+	/**
+	 * Metodo test del metodo AnadirLibro
+	 */
 		public void testAnadirLibro() {
 		//create test objects
 			creacionPrevia();
@@ -33,7 +39,9 @@ public class MiBibliotecaTest extends TestCase implements PrestarLibros {
 		assertEquals(0, mb.getLibros().size());
 		}
 		
-		
+		/**
+		 * Metodo test del metodo Prestar
+		 */
 		@Override
 		public void testPrestar() {
 		// set up objects
@@ -53,6 +61,9 @@ public class MiBibliotecaTest extends TestCase implements PrestarLibros {
 		assertFalse("El libro nunca se prestó", mb.devolver(b2));
 		}
 
+		/**
+		 * Metodo generado a partir de un bloque de codigo
+		 */
 		private void creacionPrevia() {
 			Libro b1 = new Libro("Book1");
 			Libro b2 = new Libro("Book2");
@@ -61,6 +72,9 @@ public class MiBibliotecaTest extends TestCase implements PrestarLibros {
 			p1.setNombre("Fred");
 			p2.setNombre("Sue");
 		}
+		/**
+		 * Metodo test del metodo getLibrosDisponibles
+		 */
 		public void testGetLibrosDsiponibles() {
 			creacionPrevia();
 			MiBiblioteca mb = new MiBiblioteca("Test");
@@ -80,6 +94,9 @@ public class MiBibliotecaTest extends TestCase implements PrestarLibros {
 			assertEquals(0, testLibros.size());
 			}
 		
+		/**
+		 * Metodo test del metodo getLibrosNoDisponibles
+		 */
 		public void testGetLibrosNoDisponibles() {
 			creacionPrevia();
 			MiBiblioteca mb = new MiBiblioteca("Test");
@@ -97,6 +114,9 @@ public class MiBibliotecaTest extends TestCase implements PrestarLibros {
 			assertEquals(2, testLibros.size());
 			assertEquals(1, testLibros.indexOf(b2));
 			}
+		/**
+		 * metodo test del metodo toString
+		 */
 		public void testToString() {
 			creacionPrevia();
 			MiBiblioteca mb = new MiBiblioteca("Test");
